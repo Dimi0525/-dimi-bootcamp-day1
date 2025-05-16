@@ -13,7 +13,22 @@ def greet(name: str, age: int, city: str, lang: str) -> None:
 
 # ------------- Hauptteil -------------
 if __name__ == "__main__":
-    name = input("Wie heißt du? ")
-    age  = int(input("Wie alt bist du? "))
-    city = input("In welcher Stadt lebst du? ")
-    lang = input("Welche Programmiersprache findest du spannend? ")
+    while True:
+        print("\nGib 'q' ein, um das Programm zu beenden.")
+
+        name = input("Wie heißt du? ")
+        if name.lower() == "q":
+            break
+
+        age_input = input("Wie alt bist du? ")
+        if age_input.lower() == "q":
+            break
+        age = int(age_input)
+
+        city = input("In welcher Stadt lebst du? ")
+        if city.lower() == "q":
+            break
+
+        lang = input("Welche Programmiersprache findest du spannend? ")
+        if lang.lower() == "q":
+            break
