@@ -1,0 +1,13 @@
+# Neuen Ordner für Berichte erstellen
+$reportFolder = "C:\Users\Dimitrios\Desktop\Dimi-Business\02_Drucker_Projekte\Wochenberichte"
+New-Item -Path $reportFolder -ItemType Directory -Force
+
+# Simulierte Drucker-IDs (z. B. Drucker_1 bis Drucker_10)
+for ($i = 1; $i -le 10; $i++) {
+    $fileName = "Drucker_$i.txt"
+    $filePath = Join-Path $reportFolder $fileName
+    $content = "Verkaufsbericht für Drucker $i`nDatum: $(Get-Date -Format 'dd.MM.yyyy')`nStatus: verkauft"
+    Set-Content -Path $filePath -Value $content
+}
+
+Write-Host "`n✅ Alle 10 Verkaufsberichte wurden erstellt im Ordner:`n$reportFolder" -ForegroundColor Green
