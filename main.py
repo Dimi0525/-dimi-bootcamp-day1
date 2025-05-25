@@ -1,6 +1,7 @@
 from greetings import greet
-
-if __name__ == "__main__":
+def main():
+    """Haupt-Einstiegspunkt für das Kommandozeilen-Skript."""
+ (if __name__ == "__main__"):
     # Interaktive Schleife
     while True:
         print("\nGib 'q' ein, um das Programm zu beenden.")
@@ -32,3 +33,4 @@ if __name__ == "__main__":
     ]
     for name, age, city, lang in test_users:
         greet(name, age, city, lang)
+        git add __init__.py setup.py main.py
