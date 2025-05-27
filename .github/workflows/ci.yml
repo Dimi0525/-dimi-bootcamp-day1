@@ -5,11 +5,18 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
+  steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: '3.12'
       - run: pip install pytest
       - run: pytest -q
-      
+       
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+      - run: pip install -e .         # <— hier dein Package „editable“ installieren
+      - run: pip install pytest       # falls du’s nicht schon im setup.py als Test-Dependency hast
+      - run: pytest -q

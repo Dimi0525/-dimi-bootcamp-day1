@@ -1,0 +1,8 @@
+setup.py
+dimi_bootcamp_day1.egg-info/PKG-INFO
+dimi_bootcamp_day1.egg-info/SOURCES.txt
+dimi_bootcamp_day1.egg-info/dependency_links.txt
+dimi_bootcamp_day1.egg-info/entry_points.txt
+dimi_bootcamp_day1.egg-info/top_level.txt
+tests/__init__.py
+tests/test_greetings.py

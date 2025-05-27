@@ -1,0 +1,2 @@
+[console_scripts]
+dimi-greet = main:main
